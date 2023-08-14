@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>personnal portfolio - ABIR RATBAOUI </title>
+        <link rel="icon"   type="image/png" href="https://www.shutterstock.com/image-photo/natural-sunset-evening-rise-field-260nw-1126749131.jpg" >
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="video-container">
+                <video autoplay loop muted>
+                  <source src=" portfolio images/video portfolio.mp4" type="video/mp4">
+                </video>
+
+              <div class="container">
+                
+                <nav> 
+                    <ul id="sidemenu">
+                        <li><a href="#header">home</a></li>
+                        <li><a href="#about ">about me </a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                  
+                <div class="header-text">
+                    <p>engineering student</p>
+                    <h1>Hi there, I'm <span> ABIR RATBAOUI</span><br>  from Morocco</h1>
+                </div>
+        </div>
+    </div>
+    <!--------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="portfolio images/IMAGE ACT1.jpg" class="per-img">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub">about me</h1>
+                    <p>I'm ABIR RATBAOUI,an engineering student, born in 2005 in the vibrant city of Casablanca and raised in the charming town of Kenitra, Morocco. From a young age, I was drawn to the world of technology and computers, sparking a passion for exploring the vast possibilities of software engineering. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>programing:</span> <br>python, css, html.</li>
+                            <li><span>languages:</span> <br>Arabic,French, English, Spanish(BEGINNER) </li>
+                            <li><span>design :</span> <br>canva.</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>yanecode digital:</span> <br>intern 15july2023-15august2023</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>national school of applied sciences of Kenitra:</span> <br>engineer degree,2022-2027 (current)</li>
+                            <li><span>abdelmalek es-saadi high school:</span> <br>baccalauriat biof mathematic sciences 2021-2022, feature:good </li>
+                           <li><span>American school(kenitra):</span> <br>period of 2 years </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-----projects------->
+  <div id="projects">
+    <div class="container">
+        <h1 class="sub">my projects</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src=" portfolio images/personalized portfolio.png" >
+                <div class="layer">
+                    <h3>portfolio website</h3>
+                    <p>a personal portfolio website </p>
+                    <a href="https://github.com/abirratbaoui"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------conctact----->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>abirratbaoui@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+212628766811</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abir-ratbaoui-994039277" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1R7qhi6z4ztN5_ZZySwAd06vUf8e9z6kq/view?usp=drivesdk" download class="btn" target="_blank">download cv</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Thanks for visiting!!! &copy; ABIR RATBAOUI.</p>
+        </div>
+    </div>
+
+  </div>
+      <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+             tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents) {
+             tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+      <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+  </script>
+    </body>
+</html>
